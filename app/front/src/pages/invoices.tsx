@@ -120,7 +120,7 @@ export function Invoices() {
     ]);
 
     autoTable(doc, {
-      head: [['Month', 'Usage', 'Unit Cost', 'Total Cost', 'Status']],
+      head: [['Month', 'Usage', 'Unit Cost', 'Total Cost']],
       body: tableData,
       startY: 40,
       headStyles: {
@@ -165,7 +165,7 @@ export function Invoices() {
     <div className='pr-6 w-full'>
       <div className='space-y-4 pt-6'>
         <div className='flex justify-between items-center'>
-          <h1 className='text-3xl font-bold tracking-tight'>Invoices</h1>
+          <h1 className='text-3xl font-bold tracking-tight'>Cost</h1>
           {selectedInvoices.length > 0 && (
             <div className='flex gap-2'>
               <DropdownMenu>
@@ -228,12 +228,6 @@ export function Invoices() {
                   <div className='flex items-center'>
                     Total Cost (€)
                     {getSortIcon('totalCost')}
-                  </div>
-                </TableHead>
-                <TableHead onClick={() => requestSort('paid')} className='cursor-pointer hover:bg-accent'>
-                  <div className='flex items-center'>
-                    Status
-                    {getSortIcon('paid')}
                   </div>
                 </TableHead>
                 <TableHead className='text-right pr-14'>Actions</TableHead>

@@ -42,7 +42,7 @@ export function UtilityChart({ data }: { data: UtilityHistoryEntry[] }) {
             <CardHeader className='flex flex-row items-center justify-between'>
                 <div>
                     <CardTitle>Utility Consumption</CardTitle>
-                    <CardDescription>Showing data for {selectedYear} (in units)</CardDescription>
+                    <CardDescription>Showing data for {selectedYear} (in EUR)</CardDescription>
                 </div>
                 <Select value={selectedYear} onValueChange={setSelectedYear}>
                     <SelectTrigger className='w-[120px]'>

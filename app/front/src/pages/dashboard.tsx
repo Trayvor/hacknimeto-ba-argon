@@ -118,41 +118,6 @@ export function Dashboard() {
         <div className='pr-6 w-full'>
             <div className='space-y-4 pt-6'>
                 <UtilityChart data={historyData ?? []} />
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Energy Saving Suggestions</CardTitle>
-                        <CardDescription>Based on your current consumption patterns</CardDescription>
-                    </CardHeader>
-
-                    <CardContent className='grid gap-4'>
-                        {insightsData?.map((item) => (
-                            <div className='flex items-center gap-4'>
-                                <div className='flex-1'>
-                                    <p className='font-medium'>Heating Optimization</p>
-                                    <p className='text-sm text-muted-foreground'>{item}</p>
-                                </div>
-                                <Button variant='outline' size='sm'>
-                                    View Details
-                                </Button>
-                            </div>
-                        ))}
-                    </CardContent>
-                </Card>
-                {/* <div className='flex justify-between items-center mb-4'>
-                    <div className='flex items-center gap-4'>
-                        <div className='text-sm font-medium text-muted-foreground'>Select Time Period:</div>
-                        <DatePickerWithRange
-                            dateRange={dateRange}
-                            setDateRange={setDateRange}
-                            placeholder='Select a date range'
-                            className='my-4'
-                        />
-                    </div>
-                    <Button className='px-6' onClick={handleExport}>
-                        Export
-                    </Button>
-                </div> */}
                 <div className='space-y-6'>
                     <Card>
                         <CardHeader>
@@ -187,6 +152,43 @@ export function Dashboard() {
                         </CardContent>
                     </Card>
                 </div>
+                <Card style={{
+                    border: '2px solid orange', 
+                    marginBottom: '20px',
+                }}>
+                    <CardHeader>
+                        <CardTitle>Energy Saving Suggestions</CardTitle>
+                        <CardDescription>Based on your current consumption patterns</CardDescription>
+                    </CardHeader>
+
+                    <CardContent className='grid gap-4'>
+                        {insightsData?.map((item) => (
+                            <div className='flex items-center gap-4'>
+                                <div className='flex-1'>
+                                    <p className='font-medium'>Heating Optimization</p>
+                                    <p className='text-sm text-muted-foreground'>{item}</p>
+                                </div>
+                                <Button variant='outline' size='sm'>
+                                    View Details
+                                </Button>
+                            </div>
+                        ))}
+                    </CardContent>
+                </Card>
+                {/* <div className='flex justify-between items-center mb-4'>
+                    <div className='flex items-center gap-4'>
+                        <div className='text-sm font-medium text-muted-foreground'>Select Time Period:</div>
+                        <DatePickerWithRange
+                            dateRange={dateRange}
+                            setDateRange={setDateRange}
+                            placeholder='Select a date range'
+                            className='my-4'
+                        />
+                    </div>
+                    <Button className='px-6' onClick={handleExport}>
+                        Export
+                    </Button>
+                </div> */}
             </div>
         </div>
     );
