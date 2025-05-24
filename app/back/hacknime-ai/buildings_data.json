@@ -1,0 +1,40 @@
+{
+  "Building 1": {
+    "Floor 0": {
+      "Office A": {"temp": 22.5, "humidity": 40},
+      "Office B": {"temp": 23.0, "humidity": 42}
+    },
+    "Floor 1": {
+      "Office A": {"temp": 21.5, "humidity": 38}
+    }
+  },
+  "Sky Tower": {
+    "Floor 0": {
+      "Office A": {"temp": 24.0, "humidity": 35}
+    },
+    "Floor 1": {
+      "Office A": {"temp": 23.5, "humidity": 37},
+      "Office B": {"temp": 23.8, "humidity": 36}
+    },
+    "Floor 2": {
+      "Office C": {"temp": 22.0, "humidity": 45}
+    }
+  },
+  "Riverfront Plaza": {
+    "Floor 0": {
+      "Office D": {"temp": 25.0, "humidity": 39}
+    }
+  },
+  "Central Park": {
+    "Floor 0": {
+      "Office E": {"temp": 21.0, "humidity": 41}
+    },
+    "Floor 1": {
+      "Office A": {"temp": 20.5, "humidity": 43}
+    },
+    "Floor 2": {
+      "Office B": {"temp": 22.5, "humidity": 40},
+      "Office C": {"temp": 22.8, "humidity": 42}
+    }
+  }
+}

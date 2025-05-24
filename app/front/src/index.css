@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    :root {
+        --radius: 0.5rem;
+    }
+}
+
+body {
+    background: #fff;
+}
+
+.loader {
+    position: absolute;
+    top: 47%;
+    left: 49%;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 6px solid #0000;
+    border-right-color: rgba(34, 38, 46, 0.592);
+    animation: l24 1s infinite linear;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: inherit;
+    animation: inherit;
+    animation-duration: 2s;
+}
+.loader:after {
+    animation-duration: 4s;
+}
+@keyframes l24 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
